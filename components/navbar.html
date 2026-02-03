@@ -1,0 +1,205 @@
+<!-- Global Gradient Defs (shared by both icons) -->
+<svg width="0" height="0" class="absolute">
+  <defs>
+    <linearGradient
+      id="menuGradient"
+      x1="0"
+      y1="15"
+      x2="30"
+      y2="15"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#D8E108" />
+      <stop offset="0.2557" stop-color="#94CB13" />
+      <stop offset="0.5295" stop-color="#41B121" />
+      <stop offset="0.7844" stop-color="#41B121" />
+      <stop offset="1" stop-color="#41B121" />
+    </linearGradient>
+  </defs>
+</svg>
+
+<style>
+  /* Mobile Consistency Styles for Navbar */
+  @media (max-width: 768px) {
+    .mobile-nav-spacing {
+      padding: 0.5rem;
+    }
+    
+    .mobile-nav-logo {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+</style>
+
+<header
+  class="w-full px-6 md:px-16 lg:px-32 py-4 bg-white shadow-lg sticky top-0 z-50"
+>
+  <div class="flex justify-between items-center">
+    <!-- Logo -->
+    <a href="index.html">
+      <img class="w-20 h-20" src="./Images/title.png" alt="Company Logo" />
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center gap-7">
+      <a href="index.html" class="text-neutral-600 font-semibold">Home</a>
+      <a href="aboutus.html" class="text-neutral-600 font-semibold"
+        >About Us</a
+      >
+      <div class="relative group">
+        <a href="#" class="text-neutral-600 font-semibold flex items-center">
+          Services
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
+        <div class="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <a href="ui-ux-design.html" class="block px-4 py-2 text-neutral-600 hover:bg-gray-100">UI/UX Design</a>
+          <a href="business-branding.html" class="block px-4 py-2 text-neutral-600 hover:bg-gray-100">Business Branding</a>
+          <a href="brand-promotions.html" class="block px-4 py-2 text-neutral-600 hover:bg-gray-100">Brand Promotions</a>
+          <a href="seo.html" class="block px-4 py-2 text-neutral-600 hover:bg-gray-100">SEO</a>
+          <a href="video-promotions.html" class="block px-4 py-2 text-neutral-600 hover:bg-gray-100">Video Promotions</a>
+          <a href="content-marketing.html" class="block px-4 py-2 text-neutral-600 hover:bg-gray-100">Content Marketing</a>
+        </div>
+      </div>
+      <a href="industries.html" class="text-neutral-600 font-semibold"
+        >Industries</a
+      >
+      <a href="contact.html" class="text-neutral-600 font-semibold"
+        >Contact</a
+      >
+    </nav>
+
+    <!-- Desktop Button -->
+    <a
+      href="contact.html"
+      class="hidden md:block px-6 py-3 bg-gradient-to-b from-yellow-400 via-lime-600 to-lime-600 rounded-md text-white text-base font-semibold"
+    >
+      Get a Quote
+    </a>
+
+    <!-- Mobile Hamburger -->
+    <div class="md:hidden">
+      <button id="menu-btn">
+        <!-- Hamburger Icon -->
+        <svg
+          id="hamburger-icon"
+          class="block"
+          width="30"
+          height="30"
+          viewBox="0 0 30 30"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#navbar-clip0)">
+    <path
+      d="M0 5V25C0.0015 26.3256 0.5288 27.5965 1.4662 28.5339C2.4035 29.4712 3.6744 29.9985 5 30H25C26.3256 29.9985 27.5965 29.4712 28.5339 28.5339C29.4712 27.5965 29.9985 26.3256 30 25V5C29.9985 3.6744 29.4712 2.4035 28.5339 1.4662C27.5965 0.5288 26.3256 0.0015 25 0H5C3.6744 0.0015 2.4035 0.5288 1.4662 1.4662C0.5288 2.4035 0.0015 3.6744 0 5ZM13.75 21.25C13.75 20.9185 13.8817 20.6005 14.1161 20.3661C14.3505 20.1317 14.6685 20 15 20H21.25C21.5815 20 21.8995 20.1317 22.1339 20.3661C22.3683 20.6005 22.5 20.9185 22.5 21.25C22.5 21.5815 22.3683 21.8995 22.1339 22.1339C21.8995 22.3683 21.5815 22.5 21.25 22.5H15C14.6685 22.5 14.3505 22.3683 14.1161 22.1339C13.8817 21.8995 13.75 21.5815 13.75 21.25ZM7.5 15C7.5 14.6685 7.6317 14.3505 7.8661 14.1161C8.1005 13.8817 8.4185 13.75 8.75 13.75H21.25C21.5815 13.75 21.8995 13.8817 22.1339 14.1161C22.3683 14.3505 22.5 14.6685 22.5 15C22.5 15.3315 22.3683 15.6495 22.1339 15.8839C21.8995 16.1183 21.5815 16.25 21.25 16.25H8.75C8.4185 16.25 8.1005 16.1183 7.8661 15.8839C7.6317 15.6495 7.5 15.3315 7.5 15ZM7.5 8.75C7.5 8.4185 7.6317 8.1005 7.8661 7.8661C8.1005 7.6317 8.4185 7.5 8.75 7.5H21.25C21.5815 7.5 21.8995 7.6317 22.1339 7.8661C22.3683 8.1005 22.5 8.4185 22.5 8.75C22.5 9.0815 22.3683 9.3995 22.1339 9.6339C21.8995 9.8683 21.5815 10 21.25 10H8.75C8.4185 10 8.1005 9.8683 7.8661 9.6339C7.6317 9.3995 7.5 9.0815 7.5 8.75Z"
+      fill="url(#menuGradient)"
+    />
+  </g>
+  <clipPath id="navbar-clip0">
+    <rect width="30" height="30" fill="white" />
+  </clipPath>
+        </svg>
+
+        <!-- Custom Close Icon -->
+        <svg
+          id="close-icon"
+          class="hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="url(#menuGradient)"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2 bg-white w-full border-t border-gray-100 pb-4 relative z-50">
+
+  <a href="index.html" class="block py-2 text-neutral-600 font-semibold">
+    Home
+  </a>
+
+  <a href="aboutus.html" class="block py-2 text-neutral-600 font-semibold">
+    About Us
+  </a>
+
+  <!-- SERVICES DROPDOWN -->
+  <div class="relative">
+    <a
+      href="#"
+      id="services-toggle"
+      class="block py-2 text-neutral-600 font-semibold flex justify-between items-center"
+    >
+      Services
+      <svg
+        class="w-4 h-4 transition-transform duration-300"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 9l-7 7-7-7"
+        ></path>
+      </svg>
+    </a>
+
+    <!-- DROPDOWN ITEMS -->
+    <div
+      id="services-dropdown"
+      class="hidden mt-2 ml-4 bg-white rounded-md shadow-lg py-2"
+    >
+      <a href="ui-ux-design.html" class="block px-4 py-2 text-neutral-600 hover:bg-gray-100">
+        UI/UX Design
+      </a>
+      <a href="business-branding.html" class="block px-4 py-2 text-neutral-600 hover:bg-gray-100">
+        Business Branding
+      </a>
+      <a href="brand-promotions.html" class="block px-4 py-2 text-neutral-600 hover:bg-gray-100">
+        Brand Promotions
+      </a>
+      <a href="seo.html" class="block px-4 py-2 text-neutral-600 hover:bg-gray-100">
+        SEO
+      </a>
+      <a href="video-promotions.html" class="block px-4 py-2 text-neutral-600 hover:bg-gray-100">
+        Video Promotions
+      </a>
+      <a href="content-marketing.html" class="block px-4 py-2 text-neutral-600 hover:bg-gray-100">
+        Content Marketing
+      </a>
+    </div>
+  </div>
+
+  <a href="industries.html" class="block py-2 text-neutral-600 font-semibold">
+    Industries
+  </a>
+
+  <a href="contact.html" class="block py-2 text-neutral-600 font-semibold">
+    Contact
+  </a>
+
+  <a
+    href="contact.html"
+    class="block mt-4 px-6 py-3 bg-gradient-to-b from-yellow-400 via-lime-600 to-lime-600 rounded-md text-white font-semibold text-center"
+  >
+    Get a Quote
+  </a>
+</div>
+
+</header>
+
+

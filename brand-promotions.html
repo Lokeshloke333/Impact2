@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI/UX Design | Impact Connect Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600;700;800&family=Poppins:wght@600&family=Be+Vietnam+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .gradient-border-tl {
+        background: linear-gradient(to bottom right, #facc15, #84cc16);
+        padding: 10px 0 0 10px;
+      }
+
+      .gradient-border-full {
+        background: linear-gradient(to right, #facc15, #a3e635, #4d7c0f);
+        padding: 2px;
+      }
+
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      .hide-scrollbar {
+        scrollbar-width: none;
+      }
+
+      /* Mobile Consistency Styles */
+      .mobile-img-responsive {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .mobile-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .mobile-spacing {
+        padding: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        .hero-content {
+          padding: 1rem !important;
+        }
+
+        .section-content {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .image-container {
+          width: 100% !important;
+          margin-bottom: 1rem;
+        }
+
+        .text-container {
+          width: 100% !important;
+        }
+
+        .testimonial-card {
+          flex-direction: column !important;
+        }
+
+        .testimonial-image {
+          width: 100% !important;
+          margin-bottom: 1rem;
+        }
+
+        .service-grid {
+          grid-template-columns: 1fr !important;
+        }
+
+        .btn-mobile-full {
+          width: 100% !important;
+        }
+
+        /* Reduce gaps between sections in mobile */
+        section:not(:first-of-type) {
+          padding-top: 1rem !important;
+        }
+
+        .py-20 {
+          padding-top: 1rem !important;
+          padding-bottom: 1rem !important;
+        }
+
+        .py-24 {
+          padding-top: 1.5rem !important;
+          padding-bottom: 1.5rem !important;
+        }
+
+        .py-16 {
+          padding-top: 1rem !important;
+          padding-bottom: 1rem !important;
+        }
+      }
+
+      /* Consistent image sizing */
+      .img-standard {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      @media (max-width: 640px) {
+        .img-standard {
+          height: 200px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-white font-['Open_Sans']">
+    <div class="w-full min-h-screen">
+      <div id="navbar-placeholder" class="relative z-[100]"></div>
+
+      <!-- Service Content -->
+      <section class="bg-gradient-to-r from-[#41B121] to-[#41B121] py-12">
+        <div class="max-w-7xl mx-auto px-6">
+          <h1
+            class="text-4xl font-semibold text-white text-center tracking-widest"
+          >
+            BRAND PROMOTIONS
+          </h1>
+        </div>
+      </section>
+
+      <!-- ================= ELEVATING UX ================= -->
+      <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex flex-col lg:flex-row items-center gap-12">
+            <!-- Image -->
+            <div class="lg:w-[40%]">
+              <!-- <div class="relative rounded-2xl overflow-hidden">
+ 
+  <div class="absolute top-0 left-0 w-full h-[6px] bg-gradient-to-r from-[#FAEC02] to-[#67BD1A]"></div>
+
+ 
+  <div class="absolute top-0 left-0 h-full w-[6px] bg-gradient-to-b from-[#FAEC02] to-[#67BD1A]"></div>
+
+
+  <img
+    src="./Images/ui-ux.png"
+    class="mt-[6px] ml-[6px] rounded-[14px] max-h-[340px] w-[calc(100%-6px)] h-[calc(100%-6px)] object-cover"
+    alt="UI UX"
+  />
+  
+</div> -->
+              <img
+                class="w-full max-w-md h-auto rounded-[30px] border-l-8 border-t-8 border-yellow-400"
+                src="./Images/brand-promotions.svg"
+                alt="UI UX"
+              />
+            </div>
+
+            <!-- Content -->
+            <div class="lg:w-[60%]">
+              <h2
+                class="text-2xl md:text-4xl font-semibold uppercase tracking-widest leading-tight md:leading-snug text-[#6e6e6e] mb-5"
+              >
+                UNLOCKING
+                <span class="text-[#65a30d] font-bold">BRAND POTENTIAL</span>
+              </h2>
+
+              <p
+                class="text-[#656363] text-base md:text-lg leading-relaxed font-['Arial'] tracking-wide md:tracking-wider mb-3"
+              >
+                Our brand promotion services are designed to amplify your
+                visibility and position your brand in front of the right
+                audience at the right time. We create strategic, data-driven
+                campaigns that increase awareness, spark engagement, and drive
+                measurable conversions. By combining creativity with market
+                insights, we ensure your brand message stands out across
+                multiple channels. Every campaign is tailored to highlight your
+                brand’s unique value proposition. The focus is on building
+                recognition, trust, and long-term growth.
+              </p>
+
+              <p
+                class="text-[#656363] text-base md:text-lg leading-relaxed font-['Arial'] tracking-wide md:tracking-wider"
+              >
+                From social media marketing to influencer partnerships, we
+                execute promotions that connect authentically with your
+                audience. Our approach ensures consistent messaging and
+                impactful results across every platform.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CORE FEATURES ================= -->
+      <section class="bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+          <h2
+            class="text-2xl md:text-4xl font-semibold uppercase tracking-widest leading-tight md:leading-snug text-[#6e6e6e] mb-3"
+          >
+            Services Core Features
+          </h2>
+
+          <p
+            class="text-[#656363] text-base md:text-lg leading-relaxed font-['Arial'] tracking-wide md:tracking-wider mb-6"
+          >
+            Our brand promotion services increase brand awareness, drive
+            engagement, and boost conversions. From social media to influencer
+            partnerships, we create campaigns that showcase your brand's unique
+            value proposition.
+          </p>
+
+          <!-- GRID -->
+          <div
+            id="featuresGrid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          ></div>
+        </div>
+      </section>
+
+      <!-- ================= CTA ================= -->
+      <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+          <div
+            class="bg-gradient-to-r from-[#186C00] to-[#7DF45A] rounded-2xl p-12 flex flex-col lg:flex-row items-center lg:items-center justify-center lg:justify-between gap-10 text-center lg:text-left"
+          >
+            <div>
+              <h2 class="text-4xl font-bold text-white mb-3">
+                Ready to improve your digital experience?
+              </h2>
+              <p class="text-lg text-white">
+                Reach out to our team to explore how this service can help you.
+              </p>
+            </div>
+
+            <a href="contact.html">
+              <button
+                class="bg-yellow-400 hover:bg-yellow-500 px-12 py-4 rounded-lg text-lg font-bold transition"
+              >
+                Contact Us
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SLIDER ================= -->
+      <section class="pt-28 pb-4 md:pt-24 md:pb-12 bg-[#E9F5F0]">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex items-center justify-between mb-10 md:mb-10">
+            <h2 class="text-3xl font-bold mb-3 text-[#3F3F3F]">
+              EXPLORE MORE SERVICES
+            </h2>
+
+            <div class="flex gap-3">
+              <button
+                id="prevBtn"
+                class="w-12 h-12 bg-white shadow rounded-full text-xl"
+              >
+                ←
+              </button>
+              <button
+                id="nextBtn"
+                class="w-12 h-12 bg-white shadow rounded-full text-xl"
+              >
+                →
+              </button>
+            </div>
+          </div>
+
+          <div class="overflow-hidden pb-10 md:pb-0">
+            <div
+              id="slider"
+              class="flex gap-10 transition-transform duration-300"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SCRIPT ================= -->
+      <script>
+        /* ================= DATA ================= */
+
+        const coreFeatures = [
+          {
+            title: "Facebook",
+            desc: "Targeted Facebook ads that reach your ideal audience.",
+          },
+          {
+            title: "Instagram",
+            desc: "Engaging Instagram campaigns that drive brand awareness and sales.",
+          },
+          {
+            title: "Google My Business",
+            desc: "Optimized Google My Business listings that improve your local search visibility.",
+          },
+          {
+            title: "YouTube",
+            desc: "Video marketing campaigns that showcase your brand story.",
+          },
+          {
+            title: "WhatsApp marketing",
+            desc: "Get closer to your customers with our WhatsApp marketing services, featuring secure, efficient, and effective messaging solutions.",
+          },
+          {
+            title: "LinkedIn",
+            desc: "Professional LinkedIn campaigns that reach your B2B audience.",
+          },
+        ];
+
+        const sliderServices = [
+          {
+            image: "./Images/ui-ux1.svg",
+            title: "UI/UX Design",
+            desc: "We design clean, user-friendly interfaces that deliver smooth and engaging experiences.",
+            link: "ui-ux-design.html",
+          },
+          {
+            image: "./Images/business-branding1.svg",
+            title: "Business Branding",
+            desc: "We craft strong brand identities that connect emotionally and stand out.",
+            link: "business-branding.html",
+          },
+          {
+            image: "./Images/seo1.svg",
+            title: "SEO",
+            desc: "Data-driven SEO strategies to improve rankings and organic growth.",
+            link: "seo.html",
+          },
+          {
+            image: "./Images/video-promotions1.svg",
+            title: "Video Promotions",
+            desc: "High-quality video content designed to attract and engage audiences.",
+            link: "video-promotions.html",
+          },
+          {
+            image: "./Images/content-marketing1.svg",
+            title: "Content Marketing",
+            desc: "Strategic content that builds trust and strengthens brand authority.",
+            link: "content-marketing.html",
+          },
+        ];
+
+        /* ================= RENDER ================= */
+
+        function renderCoreFeatures() {
+          document.getElementById("featuresGrid").innerHTML = coreFeatures
+            .map(
+              (f) => `
+        <div class="flex items-start gap-4 bg-[#F5F4F4] p-7 rounded-xl shadow-sm">
+          <img src="./Images/arrow.svg" class="mt-1 shrink-0" />
+          <div class="flex-1">
+            <p class="text-[#656363] text-base md:text-lg leading-relaxed font-['Arial'] tracking-wide md:tracking-wider">
+              <span class="font-bold text-gray-800">${f.title}:</span>
+              ${f.desc}
+            </p>
+          </div>
+        </div>
+      `,
+            )
+            .join("");
+        }
+
+        function renderSliderItems() {
+          document.getElementById("slider").innerHTML = sliderServices
+            .map(
+              (s) => `
+        <div class="min-w-[300px] lg:min-w-[340px]">
+          <a href="${s.link}">
+            <img src="${s.image}" class="h-56 w-full rounded-2xl object-cover mb-5" />
+            <h3 class="text-2xl font-bold mb-1 text-[#3F3F3F]">${s.title}</h3>
+            <p class="text-[#656363] text-base md:text-lg leading-relaxed font-['Arial'] tracking-wide md:tracking-wider">${s.desc}</p>
+          </a>
+        </div>
+      `,
+            )
+            .join("");
+        }
+
+        /* ================= SLIDER ================= */
+
+        let position = 0;
+        const step = 360;
+
+        function updateSlider() {
+          document.getElementById("slider").style.transform =
+            `translateX(-${position}px)`;
+        }
+
+        document.getElementById("nextBtn").onclick = () => {
+          const slider = document.getElementById("slider");
+          const max = slider.scrollWidth - slider.parentElement.clientWidth;
+          position = position >= max ? 0 : Math.min(position + step, max);
+          updateSlider();
+        };
+
+        document.getElementById("prevBtn").onclick = () => {
+          const slider = document.getElementById("slider");
+          const max = slider.scrollWidth - slider.parentElement.clientWidth;
+          position = position <= 0 ? max : Math.max(position - step, 0);
+          updateSlider();
+        };
+
+        /* ================= INIT ================= */
+        renderCoreFeatures();
+        renderSliderItems();
+      </script>
+
+      <section class="bg-[#186C01] py-12">
+        <div class="max-w-7xl mx-auto px-6">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-6"
+          >
+            <!-- Text -->
+            <h2 class="text-white text-3xl md:text-4xl font-semibold">
+              Ready to Get Started?
+            </h2>
+
+            <!-- Button -->
+            <a
+              href="contact.html"
+              class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-lg px-8 py-4 rounded-xl transition"
+            >
+              Book A Free Consultation
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div id="footer-placeholder"></div>
+      <script src="js/include.js"></script>
+    </div>
+  </body>
+</html>

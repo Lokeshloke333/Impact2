@@ -1,0 +1,1082 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600;700;800&family=Poppins:wght@600&family=Be+Vietnam+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #slide1:checked ~ div #slideWrapper {
+        transform: translateX(0%);
+      }
+
+      #slide2:checked ~ div #slideWrapper {
+        transform: translateX(-100vw);
+      }
+
+      #slide3:checked ~ div #slideWrapper {
+        transform: translateX(-200vw);
+      }
+
+      #slide1:checked ~ div #left1,
+      #slide2:checked ~ div #left2,
+      #slide3:checked ~ div #left3,
+      #slide1:checked ~ div #right1,
+      #slide2:checked ~ div #right2,
+      #slide3:checked ~ div #right3 {
+        display: flex;
+      }
+
+      #slide1:checked ~ div #left2,
+      #slide1:checked ~ div #left3,
+      #slide1:checked ~ div #right2,
+      #slide1:checked ~ div #right3,
+      #slide2:checked ~ div #left1,
+      #slide2:checked ~ div #left3,
+      #slide2:checked ~ div #right1,
+      #slide2:checked ~ div #right3,
+      #slide3:checked ~ div #left1,
+      #slide3:checked ~ div #left2,
+      #slide3:checked ~ div #right1,
+      #slide3:checked ~ div #right2 {
+        display: none;
+      }
+
+      @media (min-width: 1217px) {
+        .hero-clip-path {
+          clip-path: polygon(0 0, 80% 0, 60% 100%, 0% 100%);
+        }
+      }
+
+      .gradient-border-tl {
+        background: linear-gradient(to bottom right, #facc15, #84cc16);
+        padding: 10px 0 0 10px;
+      }
+
+      .gradient-border-full {
+        background: linear-gradient(to right, #facc15, #a3e635, #4d7c0f);
+        padding: 2px;
+      }
+
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      .hide-scrollbar {
+        scrollbar-width: none;
+      }
+
+      /* Mobile Consistency Styles */
+      .mobile-img-responsive {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .mobile-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .mobile-spacing {
+        padding: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        .hero-content {
+          padding: 1rem !important;
+        }
+
+        .section-content {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .image-container {
+          width: 100% !important;
+          margin-bottom: 1rem;
+        }
+
+        .text-container {
+          width: 100% !important;
+        }
+
+        .testimonial-card {
+          flex-direction: column !important;
+        }
+
+        .testimonial-image {
+          width: 100% !important;
+          margin-bottom: 1rem;
+        }
+
+        .service-grid {
+          grid-template-columns: 1fr !important;
+        }
+
+        .btn-mobile-full {
+          width: 100% !important;
+        }
+
+        /* Reduce gaps between sections in mobile */
+        section:not(:first-of-type) {
+          padding-top: 1rem !important;
+        }
+
+        .py-20 {
+          padding-top: 1rem !important;
+          padding-bottom: 1rem !important;
+        }
+
+        .py-24 {
+          padding-top: 1.5rem !important;
+          padding-bottom: 1.5rem !important;
+        }
+
+        .py-16 {
+          padding-top: 1rem !important;
+          padding-bottom: 1rem !important;
+        }
+      }
+
+      /* Consistent image sizing */
+      .img-standard {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      @media (max-width: 640px) {
+        .img-standard {
+          height: 200px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-white font-['Open_Sans']">
+    <div class="w-full min-h-screen">
+      <div id="navbar-placeholder" class="relative z-[100]"></div>
+
+      <!-- slider start -->
+      <section class="relative overflow-hidden">
+        <input type="radio" name="slider" id="slide1" class="hidden" checked />
+        <input type="radio" name="slider" id="slide2" class="hidden" />
+        <input type="radio" name="slider" id="slide3" class="hidden" />
+
+        <div class="relative w-full h-full">
+          <div
+            id="slideWrapper"
+            class="flex transition-transform duration-700 w-[300vw]"
+          >
+            <!-- SLIDE 1 -->
+            <div
+              class="w-[100vw] h-[600px] bg-cover bg-center flex items-center"
+              style="background-image: url(&quot;./Images/HeroImage.jpg&quot;)"
+            >
+              <div
+                class="bg-white/95 lg:bg-white backdrop-blur-sm lg:backdrop-blur-0 w-full lg:w-[70%] h-full hero-clip-path flex items-center"
+              >
+                <div
+                  class="px-6 md:px-16 lg:px-20 xl:px-24 flex flex-col gap-8 items-center text-center md:items-start md:text-left hero-content"
+                >
+                  <div class="flex flex-col gap-4 max-w-xl">
+                    <p class="text-[#6e6e6e] text-xl font-normal">
+                      Tech Services
+                    </p>
+                    <h1 class="text-4xl lg:text-5xl">
+                      <span class="text-[#6e6e6e] font-normal leading-tight"
+                        >A
+                      </span>
+                      <span class="text-lime-600 font-semibold leading-tight"
+                        >Digital</span
+                      >
+                      <span class="text-[#6e6e6e] font-normal leading-tight">
+                        Marketing and Design
+                      </span>
+                      <span class="text-lime-600 font-semibold leading-tight"
+                        >Solutions</span
+                      >
+                    </h1>
+                    <p class="text-[#656363] text-lg lg:text-xl leading-loose">
+                      Elevate your brand with our creative digital marketing
+                      solutions, crafted to engage your audience and boost
+                      conversions.
+                    </p>
+                  </div>
+                  <a
+                    href="contact.html"
+                    class="w-full sm:w-fit px-8 py-4 bg-gradient-to-b from-yellow-400 via-lime-600 to-lime-600 rounded-md text-white text-xl font-semibold text-center"
+                  >
+                    Contact Us Today
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div
+              class="w-[100vw] h-[600px] bg-cover bg-center flex items-center"
+              style="background-image: url(&quot;./Images/HeroImage2.png&quot;)"
+            >
+              <div
+                class="bg-white/95 lg:bg-white backdrop-blur-sm lg:backdrop-blur-0 w-full lg:w-[70%] h-full hero-clip-path flex items-center"
+              >
+                <div
+                  class="px-6 md:px-16 lg:px-20 xl:px-24 flex flex-col gap-8 items-center text-center md:items-start md:text-left lg:max-w-2xl hero-content"
+                >
+                  <div
+                    class="flex flex-col gap-4 max-w-xl lg:max-w-lg xl:max-w-md"
+                  >
+                    <p class="text-[#6e6e6e] text-xl font-normal">
+                      Tech Services
+                    </p>
+                    <h1 class="text-4xl lg:text-5xl">
+                      <span class="text-[#6e6e6e] font-normal leading-tight"
+                        >Let Our
+                      </span>
+                      <span class="text-lime-600 font-semibold leading-tight"
+                        >Experience</span
+                      >
+                      <span class="text-[#6e6e6e] font-normal leading-tight">
+                        Be your</span
+                      >
+                      <span class="text-lime-600 font-semibold leading-tight"
+                        >Guide</span
+                      >
+                    </h1>
+                    <p class="text-[#656363] text-lg lg:text-xl leading-loose">
+                      Our seasoned professionals will partner with you to
+                      develop a customized digital strategy that meets your
+                      unique business goals.
+                    </p>
+                  </div>
+                  <a
+                    href="contact.html"
+                    class="w-full sm:w-fit px-8 py-4 bg-gradient-to-b from-yellow-400 via-lime-600 to-lime-600 rounded-md text-white text-xl font-semibold text-center"
+                  >
+                    Contact Us Today
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div
+              class="w-[100vw] h-[600px] bg-cover bg-center flex items-center"
+              style="background-image: url(&quot;./Images/HeroImage3.jpg&quot;)"
+            >
+              <div
+                class="bg-white/95 lg:bg-white backdrop-blur-sm lg:backdrop-blur-0 w-full lg:w-[70%] h-full hero-clip-path flex items-center"
+              >
+                <div
+                  class="px-6 md:px-16 lg:px-20 xl:px-24 flex flex-col gap-8 items-center text-center md:items-start md:text-left lg:max-w-2xl hero-content"
+                >
+                  <div class="flex flex-col gap-4">
+                    <p class="text-[#6e6e6e] text-xl font-normal">
+                      Tech Services
+                    </p>
+                    <h1 class="text-4xl lg:text-5xl">
+                      <span class="text-[#6e6e6e] font-normal leading-tight"
+                        >Smart
+                      </span>
+                      <span class="text-lime-600 font-semibold leading-tight"
+                        >Solutions</span
+                      >
+                      <span class="text-[#6e6e6e] font-normal leading-tight"
+                        >for Smarter</span
+                      >
+                      <span class="text-lime-600 font-semibold leading-tight"
+                        >Business</span
+                      >
+                    </h1>
+                    <p class="text-[#656363] text-lg lg:text-xl leading-loose">
+                      Stay ahead of the competition with our innovative digital
+                      marketing solutions, designed to drive efficiency,
+                      productivity, and growth.
+                    </p>
+                  </div>
+                  <a
+                    href="contact.html"
+                    class="w-full sm:w-fit px-8 py-4 bg-gradient-to-b from-yellow-400 via-lime-600 to-lime-600 rounded-md text-white text-xl font-semibold text-center"
+                  >
+                    Contact Us Today
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARROWS -->
+          <div
+            class="absolute inset-y-0 left-0 right-0 flex items-center justify-between px-4 max-[793px]:hidden pointer-events-none"
+          >
+            <!-- LEFT ARROWS -->
+            <label
+              for="slide3"
+              class="left-1 pointer-events-auto w-12 h-12 bg-lime-300/70 rounded-full flex items-center justify-center cursor-pointer"
+              id="left1"
+            >
+              <svg
+                class="w-6 h-6 text-zinc-800"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+            </label>
+            <label
+              for="slide1"
+              class="left-1 pointer-events-auto w-12 h-12 bg-lime-300/70 rounded-full flex items-center justify-center cursor-pointer hidden"
+              id="left2"
+            >
+              <svg
+                class="w-6 h-6 text-zinc-800"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+            </label>
+            <label
+              for="slide2"
+              class="left-1 pointer-events-auto w-12 h-12 bg-lime-300/70 rounded-full flex items-center justify-center cursor-pointer hidden"
+              id="left3"
+            >
+              <svg
+                class="w-6 h-6 text-zinc-800"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+            </label>
+
+            <!-- RIGHT ARROWS -->
+            <label
+              for="slide2"
+              class="right-1 pointer-events-auto w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md cursor-pointer"
+              id="right1"
+            >
+              <svg
+                class="w-6 h-6 text-zinc-800"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </label>
+            <label
+              for="slide3"
+              class="right-1 pointer-events-auto w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md cursor-pointer hidden"
+              id="right2"
+            >
+              <svg
+                class="w-6 h-6 text-zinc-800"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </label>
+            <label
+              for="slide1"
+              class="right-1 pointer-events-auto w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md cursor-pointer hidden"
+              id="right3"
+            >
+              <svg
+                class="w-6 h-6 text-zinc-800"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </label>
+          </div>
+        </div>
+      </section>
+      <!-- slider end -->
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const slides = document.querySelectorAll("input[name='slider']");
+          const sliderWrapper = document.getElementById("slideWrapper");
+          let startX = 0;
+          let endX = 0;
+          let autoSlide;
+
+          // Touch start
+          sliderWrapper.addEventListener("touchstart", (e) => {
+            startX = e.touches[0].clientX;
+          });
+
+          // Touch end
+          sliderWrapper.addEventListener("touchend", (e) => {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+          });
+
+          function handleSwipe() {
+            let currentIndex = [...slides].findIndex((slide) => slide.checked);
+
+            if (endX < startX - 50) {
+              // Swipe left → move to next
+              goToSlide((currentIndex + 1) % slides.length);
+            }
+
+            if (endX > startX + 50) {
+              // Swipe right → move to previous
+              goToSlide((currentIndex - 1 + slides.length) % slides.length);
+            }
+          }
+
+          function goToSlide(index) {
+            slides[index].checked = true;
+          }
+
+          function startAutoSlide() {
+            autoSlide = setInterval(() => {
+              let currentIndex = [...slides].findIndex(
+                (slide) => slide.checked,
+              );
+              let nextIndex = (currentIndex + 1) % slides.length;
+              goToSlide(nextIndex);
+            }, 6000); // ⏱ 6 seconds
+          }
+
+          function stopAutoSlide() {
+            clearInterval(autoSlide);
+          }
+
+          // Start auto sliding
+          startAutoSlide();
+
+          // Pause on hover (desktop only)
+          sliderWrapper.addEventListener("mouseenter", stopAutoSlide);
+          sliderWrapper.addEventListener("mouseleave", startAutoSlide);
+        });
+      </script>
+
+      <!-- About Us section -->
+
+      <section
+        id="AboutusID"
+        class="pt-14 md:pt-20 px-6 md:px-16 lg:px-24 pb-0"
+      >
+        <div
+          class="flex flex-col-reverse lg:flex-row justify-between items-center gap-12 section-content"
+        >
+          <div class="w-full lg:w-1/2 flex flex-col gap-8">
+            <div class="flex flex-col gap-2">
+              <!-- tighter spacing here -->
+              <div class="text-lime-600 text-xl font-semibold leading-relaxed">
+                About Us
+              </div>
+              <h2
+                class="text-2xl md:text-3xl font-semibold uppercase tracking-widest leading-tight md:leading-snug text-[#6e6e6e]"
+              >
+                Grow your business with our Expert
+                <span class="text-[#65a30d] font-bold">Online Strategies</span>
+              </h2>
+            </div>
+
+            <p
+              class="text-[#656363] text-base md:text-lg leading-relaxed font-['Arial'] tracking-wide md:tracking-wider -mt-5"
+            >
+              Impact Connect Solutions is a premier Digital Marketing and Design
+              Agency offering comprehensive web services globally. With
+              extensive experience in analyzing clients' businesses, we empower
+              them to enhance their online presence and achieve their goals
+              effectively.
+            </p>
+
+            <a
+              href="contact.html"
+              class="w-full sm:w-fit px-9 py-4 bg-gradient-to-b from-yellow-400 via-lime-600 to-lime-600 rounded-md text-white text-xl font-semibold text-center block sm:inline-block"
+            >
+              Contact Us Today
+            </a>
+          </div>
+
+          <img
+            class="w-full max-w-md h-auto rounded-[30px] border-r-8 border-t-8 border-yellow-400"
+            src="./Images/frame.jpeg"
+            alt="About us image"
+          />
+        </div>
+      </section>
+
+      <section class="pt-14 md:pt-20 pb-0 px-6 md:px-16 lg:px-24">
+        <div
+          class="flex flex-col-reverse lg:flex-row-reverse items-center gap-12 section-content"
+        >
+          <div class="w-full lg:w-1/2 flex flex-col gap-8">
+            <div class="flex flex-col gap-2">
+              <h3
+                class="text-2xl md:text-3xl font-semibold uppercase tracking-widest leading-tight md:leading-snug text-[#6e6e6e]"
+              >
+                Our core strengths include:
+              </h3>
+              <p
+                class="text-[#656363] text-base md:text-lg leading-relaxed font-['Arial'] tracking-wide md:tracking-wider"
+              >
+                Partner with us to amplify your online presence, drive more
+                leads, and grow your business with our expert digital marketing
+                services.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <div class="p-4 rounded flex items-center gap-4">
+                <svg
+                  class="w-6 h-6 flex-shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.55 18.45L3.4 12.3L5.29 10.41L9.55 14.67L18.71 5.51L20.6 7.4L9.55 18.45Z"
+                    fill="url(#paint0_linear_1)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_1"
+                      x1="12"
+                      y1="5.5"
+                      x2="12"
+                      y2="18.45"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#CDDD09" />
+                      <stop offset="1" stop-color="#63BA1A" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <p
+                  class="text-neutral-700 text-lg font-semibold uppercase leading-snug"
+                >
+                  Loyalty to our client's success
+                </p>
+              </div>
+
+              <div class="p-4 rounded flex items-center gap-4">
+                <svg
+                  class="w-6 h-6 flex-shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.55 18.45L3.4 12.3L5.29 10.41L9.55 14.67L18.71 5.51L20.6 7.4L9.55 18.45Z"
+                    fill="url(#paint0_linear_2)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_2"
+                      x1="12"
+                      y1="5.5"
+                      x2="12"
+                      y2="18.45"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#CDDD09" />
+                      <stop offset="1" stop-color="#63BA1A" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <p
+                  class="text-neutral-700 text-lg font-semibold uppercase leading-snug"
+                >
+                  Unwavering hard work and dedication
+                </p>
+              </div>
+
+              <div class="p-4 rounded flex items-center gap-4">
+                <svg
+                  class="w-6 h-6 flex-shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.55 18.45L3.4 12.3L5.29 10.41L9.55 14.67L18.71 5.51L20.6 7.4L9.55 18.45Z"
+                    fill="url(#paint0_linear_3)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_3"
+                      x1="12"
+                      y1="5.5"
+                      x2="12"
+                      y2="18.45"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#CDDD09" />
+                      <stop offset="1" stop-color="#63BA1A" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <p
+                  class="text-neutral-700 text-lg font-semibold uppercase leading-snug"
+                >
+                  Innovative thinking to stay ahead
+                </p>
+              </div>
+
+              <div class="p-4 rounded flex items-center gap-4">
+                <svg
+                  class="w-6 h-6 flex-shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.55 18.45L3.4 12.3L5.29 10.41L9.55 14.67L18.71 5.51L20.6 7.4L9.55 18.45Z"
+                    fill="url(#paint0_linear_4)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_4"
+                      x1="12"
+                      y1="5.5"
+                      x2="12"
+                      y2="18.45"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#CDDD09" />
+                      <stop offset="1" stop-color="#63BA1A" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <p
+                  class="text-neutral-700 text-lg font-semibold uppercase leading-snug"
+                >
+                  Comprehensive expertise in digital marketing
+                </p>
+              </div>
+            </div>
+
+            <a
+              href="contact.html"
+              class="w-full sm:w-fit px-9 py-4 bg-gradient-to-b from-yellow-400 via-lime-600 to-lime-600 rounded-md text-white text-xl font-semibold text-center block"
+            >
+              Contact Us Today
+            </a>
+          </div>
+          <div class="w-full max-w-lg p-4 lg:mr-[5%] image-container">
+            <div class="relative w-full" style="padding-bottom: 100%">
+              <div
+                class="absolute inset-0 rounded-2xl shadow-lg gradient-border-tl"
+              >
+                <img
+                  class="w-full h-full object-cover rounded-xl mobile-img-responsive"
+                  src="./Images/Man1.jpg"
+                  alt="Man in a meeting"
+                />
+              </div>
+
+              <div
+                class="absolute bottom-[-10%] right-[-10%] w-2/3 h-2/3 rounded-2xl shadow-xl gradient-border-tl"
+              >
+                <img
+                  class="w-full h-full object-cover rounded-xl mobile-img-responsive"
+                  src="./Images/hshake.jpg"
+                  alt="Handshake"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+          <!-- Heading -->
+          <div class="text-center mb-16">
+            <div class="text-lime-600 text-xl font-semibold leading-relaxed">
+              Services
+            </div>
+            <h2
+              class="text-2xl md:text-3xl font-semibold uppercase tracking-widest leading-tight md:leading-snug text-[#6e6e6e]"
+            >
+              EXPERIENCE
+              <span class="text-[#65a30d] font-bold">PERSONALIZED</span> SERVICE
+              WITH A
+              <span class="text-[#65a30d] font-bold">DEDICATED MANAGER</span>.
+            </h2>
+            <div class="w-64 h-[2px] bg-[#83A790] mx-auto mt-6"></div>
+          </div>
+
+          <!-- Services Grid -->
+          <div
+            id="servicesGrid"
+            class="grid md:grid-cols-3 gap-12 service-grid"
+          ></div>
+        </div>
+      </section>
+
+      <!-- ================= SERVICES DATA (OBJECT) ================= -->
+      <script>
+        const services = [
+          {
+            title: "UI/UX Design",
+            desc: "We design clean, user-friendly interfaces that deliver smooth and engaging experiences.",
+            img: "./Images/ui-ux1.svg",
+            link: "ui-ux-design.html",
+          },
+          {
+            title: "Business Branding",
+            desc: "We craft strong brand identities that connect emotionally and stand out.",
+            img: "./Images/business-branding.svg",
+            link: "business-branding.html",
+          },
+          {
+            title: "Brand Promotions",
+            desc: "Result-driven promotional strategies to increase visibility and conversions.",
+            img: "./Images/brand-promotions.svg",
+            link: "brand-promotions.html",
+          },
+          {
+            title: "Video Promotions",
+            desc: "High-quality video content designed to attract and engage audiences.",
+            img: "./Images/video-promotions1.svg",
+            link: "video-promotions.html",
+          },
+          {
+            title: "Content Marketing",
+            desc: "Strategic content that builds trust and strengthens brand authority.",
+            img: "./Images/content-marketing1.svg",
+            link: "content-marketing.html",
+          },
+          {
+            title: "SEO",
+            desc: "Data-driven SEO strategies to improve rankings and organic growth.",
+            img: "./Images/seo1.svg",
+            link: "seo.html",
+          },
+        ];
+
+        const grid = document.getElementById("servicesGrid");
+
+        services.forEach((service) => {
+          grid.innerHTML += `
+      <div>
+        <!-- Gradient Border Wrapper -->
+        <div class="mb-6 rounded-2xl bg-gradient-to-b from-yellow-400 to-green-500 pt-[5px] pl-[5px] pr-0 pb-0">
+
+          <!-- Image link -->
+          <a href="${service.link}" class="block">
+            <div class="rounded-2xl overflow-hidden bg-white flex items-center justify-center">
+              <img
+                src="${service.img}"
+                alt="${service.title}"
+                class="w-full h-56 object-contain"
+              />
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Title link -->
+        <h3 class="text-2xl font-bold mb-3 text-[#3F3F3F]">
+          <a href="${service.link}" class="hover:text-green-600 transition">
+            ${service.title}
+          </a>
+        </h3>
+
+        <p class="text-[#656363] text-base md:text-lg leading-relaxed font-['Arial'] tracking-wide md:tracking-wider">
+          ${service.desc}
+        </p>
+      </div>
+    `;
+        });
+      </script>
+
+      <!-- reviews start -->
+
+      <section class="py-7 md:py-[50px] px-6 md:px-16 lg:px-24">
+        <div
+          class="flex flex-col lg:flex-row justify-between items-center gap-12 section-content"
+        >
+          <!-- Left Side -->
+          <div class="w-full lg:w-1/2 flex flex-col gap-8 text-container">
+            <h2
+              class="text-2xl md:text-3xl font-semibold uppercase tracking-widest leading-tight md:leading-snug text-[#6e6e6e]"
+            >
+              Feedback About Their Experience With Us
+            </h2>
+
+            <p
+              class="text-stone-500 text-xl font-normal font-['Arial'] leading-9"
+            >
+              Read testimonials from our satisfied clients. See how our Digital
+              services have made a difference in their Businesses.
+            </p>
+
+            <div class="flex items-center gap-4">
+              <!-- Left Arrow -->
+              <button
+                id="prevBtn"
+                class="gradient-border-full rounded-md p-0.5"
+              >
+                <div class="bg-white rounded p-3">
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line
+                      y1="-1"
+                      x2="18.7169"
+                      y2="-1"
+                      transform="matrix(-1 0 0 1 24 12)"
+                      stroke="#41B121"
+                      stroke-width="2"
+                    />
+                    <line
+                      y1="-1"
+                      x2="10.9368"
+                      y2="-1"
+                      transform="matrix(-0.7071 0.7071 0.7071 0.7071 13.8594 4.03919)"
+                      stroke="#41B121"
+                      stroke-width="2"
+                    />
+                    <line
+                      y1="-1"
+                      x2="10.9744"
+                      y2="-1"
+                      transform="matrix(-0.7071 -0.7071 -0.7071 0.7071 11.7598 18.8095)"
+                      stroke="#41B121"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </button>
+
+              <!-- Right Arrow -->
+              <button
+                id="nextBtn"
+                class="bg-gradient-to-r from-yellow-400 to-lime-500 rounded-md p-3.5"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="0"
+                    y1="11"
+                    x2="18.7169"
+                    y2="11"
+                    stroke="white"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="10.8477"
+                    y1="3.33209"
+                    x2="18.5812"
+                    y2="11.0655"
+                    stroke="white"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="11.5331"
+                    y1="18.1024"
+                    x2="19.2932"
+                    y2="10.3423"
+                    stroke="white"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Side: Carousel -->
+          <div class="overflow-hidden w-full lg:w-1/2">
+            <div
+              id="testimonialTrack"
+              class="flex transition-transform duration-500 ease-in-out"
+            >
+              <!-- Card 1 -->
+              <div
+                class="min-w-full p-5 bg-white rounded-[20px] shadow-lg border-r-[10px] border-t-[10px] border-yellow-400 flex flex-col sm:flex-row items-center gap-6"
+              >
+                <img
+                  class="w-44 h-60 rounded-[10px] border border-neutral-200 object-cover testimonial-image"
+                  src="./Images/Review.jpg"
+                  alt="Client Manasa"
+                />
+                <div class="flex flex-col gap-2">
+                  <div>
+                    <p class="text-neutral-900 text-xl font-semibold">Manasa</p>
+                    <p
+                      class="text-stone-500 text-base font-normal font-['Arial']"
+                    >
+                      Business
+                    </p>
+                  </div>
+                  <p
+                    class="text-stone-500 text-base font-normal font-['Arial'] leading-normal tracking-tight max-w-sm"
+                  >
+                    Excellent service! The team was punctual, thorough, and made
+                    my Website. Highly recommend for anyone needing a reliable
+                    and Good service.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div
+                class="min-w-full p-5 bg-white rounded-[20px] shadow-lg border-r-[10px] border-t-[10px] border-yellow-400 flex flex-col sm:flex-row items-center gap-6"
+              >
+                <img
+                  class="w-44 h-60 rounded-[10px] border border-neutral-200 object-cover testimonial-image"
+                  src="./Images/Review2.jpg"
+                  alt="Client Rahul"
+                />
+                <div class="flex flex-col gap-2">
+                  <div>
+                    <p class="text-neutral-900 text-xl font-semibold">Rahul</p>
+                    <p
+                      class="text-stone-500 text-base font-normal font-['Arial']"
+                    >
+                      Entrepreneur
+                    </p>
+                  </div>
+                  <p
+                    class="text-stone-500 text-base font-normal font-['Arial'] leading-normal tracking-tight max-w-sm"
+                  >
+                    Their digital solutions transformed my business presence
+                    online. Very professional and prompt service.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div
+                class="min-w-full p-5 bg-white rounded-[20px] shadow-lg border-r-[10px] border-t-[10px] border-yellow-400 flex flex-col sm:flex-row items-center gap-6"
+              >
+                <img
+                  class="w-44 h-60 rounded-[10px] border border-neutral-200 object-cover testimonial-image"
+                  src="./Images/Review3.jpg"
+                  alt="Client Priya"
+                />
+                <div class="flex flex-col gap-2">
+                  <div>
+                    <p class="text-neutral-900 text-xl font-semibold">Priya</p>
+                    <p
+                      class="text-stone-500 text-base font-normal font-['Arial']"
+                    >
+                      Designer
+                    </p>
+                  </div>
+                  <p
+                    class="text-stone-500 text-base font-normal font-['Arial'] leading-normal tracking-tight max-w-sm"
+                  >
+                    Amazing creativity and attention to detail. I will
+                    definitely work with them again for future projects.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        const track = document.getElementById("testimonialTrack");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+
+        let currentIndex = 0;
+        const totalSlides = 3;
+
+        function updateSlide() {
+          track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        nextBtn.addEventListener("click", () => {
+          currentIndex = (currentIndex + 1) % totalSlides;
+          updateSlide();
+        });
+
+        prevBtn.addEventListener("click", () => {
+          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+          updateSlide();
+        });
+      </script>
+
+      <!-- reviews end -->
+
+      <section class="bg-[#186C01] py-12">
+        <div class="max-w-7xl mx-auto px-6">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-6"
+          >
+            <!-- Text -->
+            <h2 class="text-white text-3xl md:text-4xl font-semibold">
+              Ready to Get Started?
+            </h2>
+
+            <!-- Button -->
+            <a
+              href="contact.html"
+              class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-lg px-8 py-4 rounded-xl transition"
+            >
+              Book A Free Consultation
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div id="footer-placeholder"></div>
+      <script src="js/include.js"></script>
+    </div>
+  </body>
+</html>
